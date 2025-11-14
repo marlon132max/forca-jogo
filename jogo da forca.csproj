@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Calculadora
+{
+    static void Main(string[] args)
+    {
+        string continuar = "sim";
+        Random random = new Random();
+
+  
+        var palavras = new Dictionary<string, string[]>()
+        {
+            { "medio", new string[] { "SISTEMA OPERACIONAL", "GERENCIADOR DE DISPOSITIVOS" } }, 
+            { "dificil", new string[] { "ENIAC", "BOMBE" } }
+        };
+
+
+        while (continuar.ToLower() == "sim")
+        {
+            Console.WriteLine("BRINCADEIRA DA FORCA");
+            Console.WriteLine("DIFICULDADES");
+            Console.WriteLine("1-medio");
+            Console.WriteLine("2-dificil");
+            Console.WriteLine("escolha sua dificuldade 1 ou 2 ?");
+            string escolha = Console.ReadLine();
+
+            string opcao = (escolha == "1") ? "medio" : "dificil";
+
+
+
+            Console.WriteLine("ESCOLHA UMA LETRA ");
+            string letra = Console.ReadLine();
+            if (opcao != "1")
+            {
+                Console.WriteLine("dica : faz a ponte entre o usuario e a maquina ");
+                Console.WriteLine("dica : Ferramenta do Windows usada para ver e controlar o hardware do computador.");
+
+
+
+            }
+            else (opcao != "2") 
+            {
+                Console.WriteLine("dica: Ocupava uma sala inteira e usava milhares de válvula");
+                Console.WriteLine("dica: “Máquina usada na Segunda Guerra para quebrar códigos");
+
+            }
+        
+        
+    }
+}
